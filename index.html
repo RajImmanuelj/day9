@@ -10,22 +10,68 @@
       margin:0px;
       padding:0px;
       box-sizing: border-box;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-    h1{
-      background-color: red;
-      font-size:2rem;
-      width: 100%;
-      height:200px;
+    body{
+      background-color:gray;
+    }
+    div{ 
+      position: relative;
+      width:50vw;
+      border-radius: 8px;
+      top:50vh;
+      margin-left: 40%;
+      
+      background-color: white;
+    }
+    h2{
+      font-weight: lighter;
       text-align: center;
-      padding-top: 150px;
-      padding-left:50%;
-
     }
-   
+    #second{
+      background-color: red;
+      position: absolute;
+      right:40%;
+      top:98%;
+      padding: 5px;;
+      border-radius: 10px;
+      font-weight: lighter;
+      color:white;
+      width:100px;
+      text-align: center;
+    }
+    img{
+      width:100%;
+      border-radius: 10px;
+    }
+    p{
+      padding:20px;
+      text-align: center;
+    }
+    #three{
+      position: absolute;
+      background-color: red;
+      border-radius: 50%;
+      padding: 5px;
+      top: 3%;
+      right: 3%;
+      color: white;
+      font-weight: lighter;
+    }
   </style>
 </head>
 <body>
-  <h1>heading</h1>
+    <div class="bg">
+      <img src="./assets/paris.jpeg"/>
+      <h2>Paris</h2>
+      <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit.Ad 
+        consectetur mollitia pariatur illum accusamus laudantium
+        corrupti,modi similique dolor praesentium,ullam debitis odit perferendis
+        veritatis nesciunt totam sint,doloremque voluptas!
+      </p>
+      <h3 id="second">Visit Paris</h3>
+      <h4 id="three">11<sup>th</sup></h4>
+      
+    </div>
 </body>
 </html>
