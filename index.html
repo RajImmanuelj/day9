@@ -4,38 +4,52 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Full stack webdevelopment</title>
+  <title>animation</title>
   <style>
-  *{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-  }
-  .parent{
-    background-color: black;
-    min-height: 500px;
-    position: relative;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .child{
-    background-color: violet;
-    height: 150px;
-    width: 100px;
-    margin: 10px;
-    
-  }
+    *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .parent{
+      height:50vh;
+      background-color: black;
+    }
+    .child{
+      height: 30%;
+      background-color: #ffbf00;
+      width:20%;
+      animation: 0.5s move linear;
+      
+      animation-iteration-count: infinite;
+      animation-direction:alternate;
+    }
+    .child2{
+      border-radius: 50%;
+      width:10%;
+      height:30%;
+      background-color: pink;
+      animation:0.5s move linear;
+      animation-iteration-count: infinite;
+      
+    }
+    @keyframes move{
+        0%{
+          transform:translateX(0vw) ;
+        }
+        50%{
+          transform: translateX(30vw);
+        }
+        100%{
+          transform: translateX(80vw);
+        }
+    }
   </style>
-    
 </head>
 <body>
   <div class="parent">
-    <div style="background-color: red;" class="child"></div>
-    <div style="background-color:gold;"class="child"></div>
-    <div style="background-color:greenyellow;"class="child"></div>
-   
+    <div class="child"></div>
+    <div class="child2"></div>
   </div>
 </body>
 </html>
