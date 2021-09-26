@@ -4,74 +4,71 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Full Stack development session.</title>
+  <title>Full stack webdevelopment</title>
   <style>
     *{
-      margin:0px;
-      padding:0px;
+      padding: 0;
+      margin:0;
       box-sizing: border-box;
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+    .parent{
+      background-color: blueviolet;
+      height:30vh;
     }
-    body{
-      background-color:gray;
-    }
-    div{ 
-      position: relative;
-      width:50vw;
-      border-radius: 8px;
-      top:50vh;
-      margin-left: 40%;
-      
-      background-color: white;
-    }
-    h2{
-      font-weight: lighter;
-      text-align: center;
-    }
-    #second{
-      background-color: red;
-      position: absolute;
-      right:40%;
-      top:98%;
-      padding: 5px;;
-      border-radius: 10px;
-      font-weight: lighter;
-      color:white;
-      width:100px;
-      text-align: center;
-    }
-    img{
-      width:100%;
-      border-radius: 10px;
-    }
-    p{
-      padding:20px;
-      text-align: center;
-    }
-    #three{
-      position: absolute;
-      background-color: red;
+    .child{
+      background-color: yellow;
       border-radius: 50%;
-      padding: 5px;
-      top: 3%;
-      right: 3%;
-      color: white;
-      font-weight: lighter;
+      width:50px;
+      height:50px;
+      transition: 0.5s;
+      transition-timing-function: linear;
+     
+    }
+    .child2{
+      background-color: yellow;
+      margin-top: 30px;
+      width:50px;
+      height:50px;
+      border-radius: 50%;
+      transition:0.5s;
+      transition-timing-function: ease-in;
+    }
+    .child:hover{
+      background-color: red;
+      transform: translate(50px);
+      transform:translateY(60px);
+      
+    }
+    .child2:hover{
+      background-color: crimson;
+      transform: rotateX(180deg);
+    }
+    div.parent div:nth-child(3){
+      width:100px;
+      background-color: cyan;
+      margin-top: 40px;
+    }
+    input:focus{
+      background-color: lawngreen;
+    }
+    input:hover{
+      background-color: red;
+    }
+    p::selection{
+        background-color: greenyellow;
     }
   </style>
 </head>
 <body>
-    <div class="bg">
-      <img src="./assets/paris.jpeg"/>
-      <h2>Paris</h2>
-      <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit.Ad 
-        consectetur mollitia pariatur illum accusamus laudantium
-        corrupti,modi similique dolor praesentium,ullam debitis odit perferendis
-        veritatis nesciunt totam sint,doloremque voluptas!
-      </p>
-      <h3 id="second">Visit Paris</h3>
-      <h4 id="three">11<sup>th</sup></h4>
-      
+  <div class="parent">
+    <div class="child"></div>
+    <div class="child2"></div>
+    <div>
+      <input type="text"/>
     </div>
+    <div>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat minima, deleniti ut hic soluta eum commodi voluptatibus in suscipit odio, praesentium molestias. Quis similique magnam neque iure eveniet. In, numquam? Obcaecati consectetur iste ex distinctio laborum sunt, quae ipsa praesentium maxime aperiam a beatae eaque id magni, dolores tempora quo.</p>
+    </div>
+  </div>
 </body>
 </html>
