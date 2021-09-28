@@ -16,3 +16,25 @@ console.log(typeof false)
 //Variable declaration
 var age=19
 console.log(age)
+console.log(typeof age)
+var num=null
+console.log(typeof num)
+//array declarartion
+var arr=[1,2,3,4]
+console.log(typeof arr)
+arr.push(10)
+console.log(arr)
+console.log(arr.length)
+//const type(can't be reassigned)
+//const a=10
+//a=12
+///console.log(a)
+//arithmetic operators
+var b=10;
+var c=2;
+console.log('c+b='c+b)
+console.log('c-b='c-b)
+console.log('c/b='c/b)
+console.log('c%b='c%b)
+console.log('c*b='c*b)
+console.log('c**b='c**b)
