@@ -1,8 +1,18 @@
-var arr=['hi','hello','goodmorning']
-var callbackfunction=(a,b)=>console.log(a,b)
-arr.forEach(callbackfunction)
-//prints elements along with index
+const a=document.querySelectorAll('input')[0]
+const b=document.querySelectorAll('input')[1]
+const add=document.querySelector('#add')
+const multiply=document.querySelector('#multiply')
+const result=document.querySelector('.result')
+console.log(result)
 
-arr.forEach((element, index) => {
-  console.log(element, index)
-})
+const sum=()=>{
+  const add=parseInt(a.value)+parseInt(b.value)
+  result.innerHTML=add
+}
+add.addEventListener('click',sum)
+
+const mul=()=>{
+  const product=parseInt(a.value)*parseInt(b.value)
+  result.innerHTML=product
+}
+multiply.addEventListener('click',mul)
