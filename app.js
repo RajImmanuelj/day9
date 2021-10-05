@@ -1,15 +1,9 @@
-let car = {
-    name: "C Class",
-    manufacturer: "Mercedes",
-    print:  ()=> {
-        console.log(this)
-        console.log(`${this.name} was created by ${this.manufacturer}`)
-    }
-}
-
-console.log(Object.keys(car))
-console.log(Object.values(car))
-var data = fetch('https://jsonplaceholder.typicode.com/todos/10')
-
-console.log(data)
-
+let value=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('Hello')
+    },3000)
+})
+console.log(value)
+setTimeout(()=>{
+    console.log(value)
+},4000)
