@@ -1,6 +1,7 @@
-const path=require('path')
-//console.log(path.extname('./utilis.js'))
-//console.log(path.dirname('./temp/utilis.js'))
-//console.log(path.relative('/','./temp/utilis.js'))
-console.log(__dirname)
-console.log(path.join(__dirname,'app.js'))
+const fs=require('fs')
+
+fs.readFile('./test.txt','utf-8',(error,data)=>{
+  if (error) console.log(error) 
+  else console.log(data) 
+})
+console.log('guest entry')
