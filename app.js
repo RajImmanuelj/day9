@@ -1,3 +1,6 @@
 const path=require('path')
-//console.log(path.resolve('./utilis.js'))
-console.log(path.relative('/','./temp/utilis.js'))
+//console.log(path.extname('./utilis.js'))
+//console.log(path.dirname('./temp/utilis.js'))
+//console.log(path.relative('/','./temp/utilis.js'))
+console.log(__dirname)
+console.log(path.join(__dirname,'app.js'))
