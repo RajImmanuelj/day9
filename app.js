@@ -1,7 +1,5 @@
 const fs=require('fs')
 
-fs.readFile('./test.txt','utf-8',(error,data)=>{
-  if (error) console.log(error) 
-  else console.log(data) 
+fs.writeFile('./test.txt','Hi',(error)=>{
+  if(error)console.log(error)
 })
-console.log('guest entry')
