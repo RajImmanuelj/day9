@@ -1,9 +1,8 @@
-const http=require('http')
-console.log(http)
-const server=http.createServer((request,response)=>{
-  console.log(request.url)
+const express= require('express')
+const app=express()
+app.get('/',(req, res)=>{
+  res.send('Server up and running')
 })
-console.log(server)
-server.listen(3000,()=>{
-  console.log(`server listening at PORT:${3000}`)
+app.listen(3000,()=>{
+  console.log(`Server listening at port ${3000}`)
 })

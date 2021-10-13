@@ -2,7 +2,7 @@
   "name": "day9",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -12,7 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/RajImmanuelj/day9.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -20,6 +19,6 @@
   },
   "homepage": "https://github.com/RajImmanuelj/day9#readme",
   "dependencies": {
-    "nodemon": "^2.0.13"
+    "express": "^4.17.1"
   }
 }
