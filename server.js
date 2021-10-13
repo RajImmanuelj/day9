@@ -1,8 +1,20 @@
-const express= require('express')
-const app=express()
-app.get('/',(req, res)=>{
-  res.send('Server up and running')
+const express = require('express')
+const PORT = 3000
+const app = express()
+
+
+const verify = (req, res, next) => {
+    if (req.headers['user-agent'] === "Thunder Client (https://www.thunderclient.io)") next()
+    else res.send("BLOCKED")
+}
+
+app.get('/', verify, (req, res) => {
+    res.send('VERIFIED')
+
 })
-app.listen(3000,()=>{
-  console.log(`Server listening at port ${3000}`)
+
+
+
+app.listen(PORT, () => {
+    console.log(`Server running at port ${PORT}`)
 })
