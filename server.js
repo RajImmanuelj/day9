@@ -4,8 +4,8 @@ const verifier=(req,res,next)=>{
     console.log(req.method)
     next()
 }
-//after adding verifier func it is used in route func
-app.get('/',verifier,(req,res)=>{
+app.use(verifier)
+app.get('/',(req,res)=>{
     res.send('hi')
 })
 app.post('/Login',(req,res)=>{
