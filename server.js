@@ -1,20 +1,19 @@
-const express = require('express')
-const PORT = 3000
-const app = express()
-
-
-const verify = (req, res, next) => {
-    if (req.headers['user-agent'] === "Thunder Client (https://www.thunderclient.io)") next()
-    else res.send("BLOCKED")
+const express=require('express')
+const app=express()
+const verifier=(req,res,next)=>{
+    console.log(req.method)
+    next()
 }
-
-app.get('/', verify, (req, res) => {
-    res.send('VERIFIED')
-
+//after adding verifier func it is used in route func
+app.get('/',verifier,(req,res)=>{
+    res.send('hi')
 })
-
-
-
-app.listen(PORT, () => {
-    console.log(`Server running at port ${PORT}`)
+app.post('/Login',(req,res)=>{
+    res.send('Login')
+})
+app.post('/Signup',(req,res)=>{
+    res.send('Signup')
+})
+app.listen(3000,()=>{
+    console.log("server listening to port 3000")
 })
